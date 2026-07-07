@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  /* --- PAV brand tokens --- */
+  --ink: #ffffff;
+  --ink-deep: #1a1220;
+  --purple-void: #1f0d33;   /* near-black purple - page background */
+  --purple-regal: #401a63;  /* primary brand purple */
+  --purple-soft: #5b2c85;   /* lighter purple for gradients/borders */
+  --gold-horn: #c9a227;     /* antique gold - the horn, the accent */
+  --gold-bright: #e6c65c;   /* brighter gold for hover/highlight */
+  --parchment: #f4ecdc;     /* founding-document paper tone */
+  --parchment-line: #e3d5b8;
+  --savanna: #2b5c44;       /* muted flag green */
+  --ember: #7c2230;         /* muted flag red, used for warnings/corruption */
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@theme inline {
+  --color-purple-void: var(--purple-void);
+  --color-purple-regal: var(--purple-regal);
+  --color-purple-soft: var(--purple-soft);
+  --color-gold-horn: var(--gold-horn);
+  --color-gold-bright: var(--gold-bright);
+  --color-parchment: var(--parchment);
+  --color-parchment-line: var(--parchment-line);
+  --color-savanna: var(--savanna);
+  --color-ember: var(--ember);
+  --color-ink-deep: var(--ink-deep);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--purple-void);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--gold-horn);
+  color: var(--purple-void);
+}
+
+.horn-arcs {
+  stroke: var(--gold-horn);
+  opacity: 0.35;
+}
+
+.chapter-eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--gold-horn);
+}
+
+.paper-surface {
+  background: var(--parchment);
+  color: var(--ink-deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

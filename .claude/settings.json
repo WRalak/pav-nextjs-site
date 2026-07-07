@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(mkdir -p content)",
+      "Bash(cp -r \"\\(dashboard\\)/content/.\" \"content/\")",
+      "Bash(rm -rf .next)",
+      "Bash(npm run *)"
+    ]
+  }
+}
