@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { href: "/manifesto", label: "Preamble & Manifesto" },
+  { href: "/manifesto", label: "Manifesto" },
   { href: "/ideology", label: "Ideology & Principles" },
   { href: "/vision-mission", label: "Vision & Mission" },
   { href: "/corruption", label: "Position on Corruption" },
