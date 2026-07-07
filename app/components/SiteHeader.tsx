@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { href: "/manifesto", label: " Manifesto" },
+  { href: "/manifesto", label: "Preamble & Manifesto" },
   { href: "/ideology", label: "Ideology & Principles" },
   { href: "/vision-mission", label: "Vision & Mission" },
   { href: "/corruption", label: "Position on Corruption" },
@@ -24,7 +24,7 @@ export function SiteHeader({ headerLogo }: { headerLogo: string }) {
             alt="PAV seal"
             width={40}
             height={40}
-            className="rounded-full"
+            className="h-10 w-10 rounded-full"
             priority
           />
           <span className="font-display text-lg tracking-tight text-white">

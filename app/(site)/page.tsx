@@ -42,7 +42,7 @@ export default async function Home() {
               alt="PAV emblem: a kudu horn encircled by the words People's Alternative Voice, with the slogan Sauti Mbadala - Haki, Usawa na Maendeleo"
               width={200}
               height={200}
-              className="rounded-full shadow-[0_0_80px_-20px_rgba(201,162,39,0.55)]"
+              className="h-50 w-50 rounded-full shadow-[0_0_80px_-20px_rgba(201,162,39,0.55)]"
               priority
             />
           </div>

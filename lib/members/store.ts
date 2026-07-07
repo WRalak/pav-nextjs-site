@@ -78,6 +78,14 @@ export async function listMembers({
   return { items, total: filtered.length };
 }
 
+export async function listAllMembers(
+  status: MemberStatus | "ALL" = "ALL"
+): Promise<Member[]> {
+  const filtered =
+    status === "ALL" ? members : members.filter((m) => m.status === status);
+  return [...filtered].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+}
+
 export async function getMemberCounts(): Promise<MemberCounts> {
   const counts: MemberCounts = { PENDING: 0, APPROVED: 0, REJECTED: 0, total: members.length };
   for (const m of members) counts[m.status]++;

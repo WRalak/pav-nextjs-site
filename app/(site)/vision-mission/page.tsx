@@ -46,7 +46,7 @@ export default async function VisionMissionPage() {
               alt="The PAV logo: a kudu horn banded in the colours of the Kenyan flag, encircled by the party name and slogan"
               width={420}
               height={420}
-              className="rounded-2xl shadow-xl"
+              className="h-105 w-105 rounded-2xl shadow-xl"
             />
           </div>
           <div>

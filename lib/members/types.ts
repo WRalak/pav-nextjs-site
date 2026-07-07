@@ -50,6 +50,7 @@ export interface MemberCounts {
  */
 export interface MemberRepository {
   listMembers(params: ListMembersParams): Promise<ListMembersResult>;
+  listAllMembers(status?: MemberStatus | "ALL"): Promise<Member[]>;
   getMemberCounts(): Promise<MemberCounts>;
   createMember(input: NewMemberInput): Promise<Member>;
   updateMemberStatus(id: string, status: MemberStatus): Promise<Member | null>;
