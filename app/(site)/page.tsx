@@ -171,19 +171,34 @@ export default async function Home() {
       </section>
 
       {/* JOIN CTA */}
-      <section className="px-6 py-28 text-center">
-        <div className="mx-auto max-w-2xl">
-          <p className="chapter-eyebrow">{content.joinYear}</p>
-          <h2 className="mt-3 font-display text-4xl leading-tight text-white sm:text-5xl">
-            {content.joinHeading}
-          </h2>
-          <p className="mt-5 text-white/70">{content.joinSubtitle}</p>
-          <Link
-            href="/join"
-            className="mt-8 inline-block rounded-full bg-gold-horn px-10 py-4 font-medium text-purple-void hover:bg-gold-bright"
-          >
-            Become a Member
-          </Link>
+      <section className="px-6 py-28">
+        <div className="mx-auto max-w-5xl rounded-2xl border border-gold-horn/45 bg-parchment p-6 text-ink-deep shadow-[0_24px_90px_-42px_rgba(201,162,39,0.95)] sm:p-10 lg:p-12">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="chapter-eyebrow text-ember">{content.joinYear}</p>
+              <h2 className="mt-3 max-w-3xl font-display text-4xl leading-tight sm:text-5xl">
+                {content.joinHeading}
+              </h2>
+              <p className="mt-5 max-w-3xl text-base leading-relaxed text-ink-deep/75 sm:text-lg">
+                {content.joinSubtitle}
+              </p>
+            </div>
+            <div className="rounded-xl border border-purple-void/10 bg-white p-5 shadow-sm sm:min-w-72">
+              <p className="font-display text-2xl leading-tight text-purple-void">
+                Membership starts here.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-ink-deep/65">
+                Complete your details, affirm the Code of Conduct, and submit
+                your application for review.
+              </p>
+              <Link
+                href="/join"
+                className="mt-6 block rounded-full bg-purple-void px-8 py-4 text-center font-medium text-white transition-colors hover:bg-purple-regal"
+              >
+                Become a Member
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

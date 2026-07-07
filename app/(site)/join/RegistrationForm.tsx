@@ -99,7 +99,7 @@ export function RegistrationForm() {
 
         <div className="grid gap-6 sm:grid-cols-2">
           <Field label="Sex" required>
-            <select required name="sex" className={inputClass} defaultValue="">
+            <select required name="sex" className={selectClass} defaultValue="">
               <option value="" disabled>Select</option>
               <option>Female</option>
               <option>Male</option>
@@ -142,7 +142,7 @@ export function RegistrationForm() {
       <fieldset className="space-y-6">
         <legend className="chapter-eyebrow text-gold-horn">Voter registration</legend>
         <Field label="County of voter registration" required>
-          <select required name="county" className={inputClass} defaultValue="">
+          <select required name="county" className={selectClass} defaultValue="">
             <option value="" disabled>Select county</option>
             {counties.map((c) => (
               <option key={c}>{c}</option>
@@ -198,6 +198,8 @@ export function RegistrationForm() {
 
 const inputClass =
   "w-full rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-white placeholder-white/30 outline-none focus:border-gold-horn focus:ring-1 focus:ring-gold-horn";
+
+const selectClass = `${inputClass} pav-select`;
 
 function Field({
   label,

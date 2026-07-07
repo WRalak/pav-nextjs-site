@@ -69,6 +69,11 @@ body {
   color: var(--ink-deep);
 }
 
+.pav-select option {
+  background: #ffffff;
+  color: var(--ink-deep);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
